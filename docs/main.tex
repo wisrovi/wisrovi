@@ -157,7 +157,7 @@
 \chapter{Executive Summary}
 This technical manual outlines the comprehensive architectural mapping and infrastructure design of the \textit{wisrovi SUITE}, a production-ready ecosystem for distributed computer vision, MLOps, and secure pipeline orchestration. Developed by William Rodriguez, AI Leader and Solutions Architect, this suite contains 26+ custom Python packages that bridge the gap between high-level architectural designs and resilient implementation.
 
-The core of the ecosystem is governed by \textit{wpipe}, a thread-safe pipeline execution engine featuring WAL-mode SQLite state storage, GIL bypass, and dynamic checkpoints. Database layers are modeled using type-safe Pydantic ORMs (\textit{wsqlite}, \textit{wredis}, \textit{wclickhouse}), while security interfaces implement machine-locked credentials vaults (\textit{wauth}) and ECDSA P-256 digital signatures (\textit{wFabricSecurity}). The suite is validated in production by \textit{NeuralForge AI}, a distributed training cluster coordinating YOLO and RT-DETR training workloads across multiple GPU-accelerated Docker nodes via Celery and Optuna. 
+The core of the ecosystem is governed by \textit{wpipe}, a thread-safe pipeline execution engine featuring WAL-mode SQLite state storage, GIL bypass, and dynamic checkpoints. Database layers are modeled using type-safe Pydantic ORMs (\textit{wsqlite}, \textit{wredis}, \textit{wclickhouse}), while security and support interfaces implement machine-locked credentials vaults (\textit{wauth}), helpdesk managers (\textit{wticket}), and ECDSA P-256 digital signatures (\textit{wFabricSecurity}). The suite is validated in production by \textit{NeuralForge AI}, a distributed training cluster coordinating YOLO and RT-DETR training workloads across multiple GPU-accelerated Docker nodes via Celery and Optuna. 
 
 This guide serves as a technical manual for deploying, configuring, and operating these high-performance systems, with detailed code examples, architectural diagrams, benchmarks, troubleshooting steps, and future integration paths with Generative AI (LangGraph, LangChain, RAG).
 
@@ -206,6 +206,7 @@ The database layer enforces strict Pydantic v2 schemas:
 \section{\sffamily Zero Trust Cryptography and Secret Vaults}
 * \textbf{wauth}: A machine-locked credentials manager. It reads system-level IDs (\texttt{/etc/machine-id}), hashes them with a local salt, and derives a unique 32-byte Fernet key. Secrets are stored in SQLite and can only be decrypted on the original host machine.
 * \textbf{wFabricSecurity}: Middlewares for Hyperledger Fabric providing ECDSA P-256 message signing, code integrity verification (SHA-256 checks), and token-bucket rate limiters.
+* \textbf{wticket}: Centralized support ticket helpdesk system with SLAs, portal, and APIs. Live demo available at \url{https://wticket.wisrovi.dev/}.
 
 \section{\sffamily MLOps and Multimedia}
 * \textbf{wyolo}: Manages YOLO and RT-DETR models. Orchestrates GPU topology checks, auto-sizes batches based on VRAM capacity, and streams logs to MLflow.
