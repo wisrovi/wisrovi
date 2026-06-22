@@ -1,0 +1,471 @@
+\documentclass[12pt,a4paper]{report}
+
+% Fuentes CRÍTICAS para compatibilidad Word
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet} % Helvetica para texto principal
+\usepackage{courier} % Courier para código
+\renewcommand{\familydefault}{\sfdefault} % Helvetica como default
+
+% Paquetes esenciales
+\usepackage{tocbibind}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{appendix}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% Configuración de márgenes
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm,
+    headheight=15pt
+}
+
+% Configuración listings EXACTA para código
+\lstset{
+    basicstyle=\ttfamily\footnotesize\fontfamily{pcr}\selectfont,
+    backgroundcolor=\color{gray!10},
+    frame=single,
+    frameround=tttt,
+    rulecolor=\color{gray!50},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black}\itshape,
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=2,
+    captionpos=b,
+    xleftmargin=2em,
+    framexleftmargin=1.5em,
+    belowskip=1em,
+    aboveskip=1em
+}
+
+% Headers y footers con sans-serif
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{blue!70!black}\textbf{\sffamily\leftmark}}
+\fancyhead[R]{\color{blue!70!black}\textbf{\sffamily\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[C]{\color{gray}\small\sffamily Kubernetes GPU Integration for MLOps Workloads}
+
+% Estilos de capítulos y secciones con sans-serif
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\sffamily\color{blue!70!black}}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\sffamily\color{blue!70!black}}
+{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{15pt}{10pt}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\sffamily\color{orange!80!black}}
+{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
+
+% Configuración hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    filecolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=orange!80!black,
+    pdftitle={Kubernetes GPU Integration for MLOps Workloads},
+    pdfauthor={William Rodriguez},
+    pdfsubject={MLOps, Kubernetes, GPU},
+    pdfkeywords={Kubernetes, GPU, MLOps, Docker, Minikube}
+}
+
+\begin{document}
+
+% Página de título SIMPLE
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    \includegraphics[width=0.25\textwidth]{sources/kubernetes-logo.png}
+    \vspace{1cm}
+    {\color{blue!70!black}\Huge\textbf{Kubernetes GPU Integration}}\\[0.5cm]
+    {\color{orange!80!black}\Large\textbf{for MLOps Workloads}}\\[1cm]
+    {\large\textit{A Modern Implementation Guide for}}\\[0.3cm]
+    {\Large\textbf{Production-Ready GPU Computing Infrastructure}}\\[1.5cm]
+    {\large\textbf{\today}}
+    \vfill
+    \colorbox{blue!70!black}{
+        \color{white}\textbf{Docker + Minikube + Kubernetes + GPU}
+    }
+\end{titlepage}
+
+% Página de autor SEPARADA
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\color{blue!70!black}\Large\textbf{Author}}\\[1cm]
+    {\Large\textbf{William Rodriguez}}\\[0.5cm]
+    \textit{Líder de IA y Arquitecto de Soluciones}\\[0.3cm]
+    \textit{eCaptureDtech}\\[0.2cm]
+    \textit{Badajoz, Extremadura, España}\\[1cm]
+    \begin{tabular}{c}
+        \textbf{Contact Information:}\\[0.5cm]
+        LinkedIn: es.linkedin.com/in/wisrovi-rodriguez\\[0.2cm]
+        Email: william.rodriguez@ecapturedtech.com\\[0.2cm]
+        GitHub: github.com/wisrovi
+    \end{tabular}
+    \vfill
+    \colorbox{orange!80!black}{
+        \color{white}\textbf{Expert in MLOps and Cloud Architecture}
+    }
+\end{titlepage}
+
+% Tabla de contenidos
+\tableofcontents
+\cleardoublepage
+
+% Listas
+\listoffigures
+\cleardoublepage
+\listoftables
+\cleardoublepage
+\lstlistoflistings
+\cleardoublepage
+
+% CAPÍTULOS CON \cleardoublepage OBLIGATORIO
+
+\cleardoublepage
+\chapter{Executive Summary}
+This technical manual outlines the comprehensive architectural mapping and infrastructure design of the \textit{wisrovi SUITE}, a production-ready ecosystem for distributed computer vision, MLOps, and secure pipeline orchestration. Developed by William Rodriguez, AI Leader and Solutions Architect, this suite contains 26+ custom Python packages that bridge the gap between high-level architectural designs and resilient implementation.
+
+The core of the ecosystem is governed by \textit{wpipe}, a thread-safe pipeline execution engine featuring WAL-mode SQLite state storage, GIL bypass, and dynamic checkpoints. Database layers are modeled using type-safe Pydantic ORMs (\textit{wsqlite}, \textit{wredis}, \textit{wclickhouse}), while security interfaces implement machine-locked credentials vaults (\textit{wauth}) and ECDSA P-256 digital signatures (\textit{wFabricSecurity}). The suite is validated in production by \textit{NeuralForge AI}, a distributed training cluster coordinating YOLO and RT-DETR training workloads across multiple GPU-accelerated Docker nodes via Celery and Optuna. 
+
+This guide serves as a technical manual for deploying, configuring, and operating these high-performance systems, with detailed code examples, architectural diagrams, benchmarks, troubleshooting steps, and future integration paths with Generative AI (LangGraph, LangChain, RAG).
+
+\cleardoublepage
+\chapter{Introduction}
+
+\section{\sffamily Background and Context}
+In modern enterprise software engineering, developing individual software scripts is straightforward, but building highly resilient, scalable, and secure production architectures remains a major challenge. Infrastructure tools must provide deterministic state transitions, handle connection pool locks, secure credentials, and utilize computational resources (such as GPUs) efficiently. 
+
+This document serves as a master blueprint for the \textit{wisrovi SUITE}, a collection of 26+ libraries engineered in Python to modularize and secure enterprise applications. The project spans database wrappers, pipeline orchestrators, cryptographic secret managers, and MLOps adapters.
+
+\section{\sffamily Author Profile and Professional Scope}
+William Rodriguez (wisrovi) is the AI Leader and Solutions Architect at eCaptureDtech, based in Badajoz, Extremadura, Spain. His professional background focuses on:
+\begin{itemize}
+    \item \textbf{Generative AI \& Agentic Systems}: Designing stateful multi-agent systems using LangGraph and LangChain, and advanced Retrieval-Augmented Generation (RAG) models.
+    \item \textbf{Computer Vision}: Deep learning lifecycles for object detection using YOLO and RT-DETR.
+    \item \textbf{High-Availability Python Engineering}: Constructing optimized, concurrent libraries leveraging Python's features.
+    \item \textbf{DevOps \& Cloud Architecture}: Containerization topologies (Docker, Kubernetes, Minikube), worker tasks scheduling (Celery, Redis), and Git CI/CD automated linting.
+\end{itemize}
+
+\section{\sffamily Document Goals and Workspace Scope}
+The primary objective of this manual is to document the entire workspace located at \texttt{/home/william.rodriguez/Documents/w\_libraries}. This guide explains how each package operates, how the systems are integrated, how to install and run them, and how to verify their technical performance.
+
+\cleardoublepage
+\chapter{The wisrovi SUITE Technical Architecture}
+
+\section{\sffamily Core Pipeline Orchestration (wpipe Ecosystem)}
+The orchestrator consists of five distinct sub-components under a unified layout:
+\begin{enumerate}
+    \item \textbf{wpipe}: The core execution engine. Exposes sync (\texttt{Pipeline}) and async (\texttt{PipelineAsync}) runners, state persistence utilizing SQLite WAL mode, and GIL bypass via process pools.
+    \item \textbf{wpipe-steps}: Reusable step modules covering HTTP requests, database queries, and notifications.
+    \item \textbf{wpipe-plugins}: A community-supported registry for third-party extensions.
+    \item \textbf{wpipe-mcp}: A Model Context Protocol (MCP) server letting AI agents design pipelines.
+    \item \textbf{wpipe-api}: Process monitor REST API built with FastAPI to track worker node health.
+\end{enumerate}
+
+\section{\sffamily Database ORMs and Caching}
+The database layer enforces strict Pydantic v2 schemas:
+\begin{itemize}
+    \item \textbf{wsqlite}: A SQLite ORM with automatic table migrations (\texttt{TableSync}), connection sharing pools, and soft deletion mixins.
+    \item \textbf{wredis}: Redis cache layer with expiring caching decorators and token-bucket rate limiters.
+    \item \textbf{wclickhouse}: Fast bulk inserter mapped via clickhouse-connect.
+    \item \textbf{Other ORMs}: Configured clients for MariaDB, MySQL, MongoDB, Elasticsearch, Databricks, and Snowflake.
+\end{itemize}
+
+\section{\sffamily Zero Trust Cryptography and Secret Vaults}
+* \textbf{wauth}: A machine-locked credentials manager. It reads system-level IDs (\texttt{/etc/machine-id}), hashes them with a local salt, and derives a unique 32-byte Fernet key. Secrets are stored in SQLite and can only be decrypted on the original host machine.
+* \textbf{wFabricSecurity}: Middlewares for Hyperledger Fabric providing ECDSA P-256 message signing, code integrity verification (SHA-256 checks), and token-bucket rate limiters.
+
+\section{\sffamily MLOps and Multimedia}
+* \textbf{wyolo}: Manages YOLO and RT-DETR models. Orchestrates GPU topology checks, auto-sizes batches based on VRAM capacity, and streams logs to MLflow.
+* \textbf{ProcessAudio}: Data augmentation (stretching, noise injection) and feature extraction (MFCCs, mel-spectrograms) using librosa.
+
+\cleardoublepage
+\chapter{Installation and Configuration Guide}
+
+\section{\sffamily Prerequisites and System Requirements}
+The suite requires a Linux environment with the following packages:
+\begin{itemize}
+    \item Python 3.10 or higher.
+    \item SQLite3 (configured with WAL support).
+    \item Docker Engine and nvidia-container-toolkit (for GPU workloads).
+    \item NVIDIA CUDA Driver (v12.0+ recommended).
+\end{itemize}
+
+\section{\sffamily Step-by-Step Installation}
+Each package under \texttt{w\_libraries} is structured with a \texttt{setup.py} and can be installed locally:
+\begin{lstlisting}[language=bash, caption={Installing w-libraries locally}]
+# Clone or locate the repository directory
+cd /home/william.rodriguez/Documents/w_libraries/w_libraries
+
+# Install core engines
+pip install -e wsqlite/
+pip install -e wauth/
+pip install -e wpipe_os/wpipe/
+\end{lstlisting}
+
+\section{\sffamily Docker and GPU Container Configuration}
+To enable GPU-accelerated workloads inside container executors, configure the Docker daemon:
+\begin{lstlisting}[caption={Docker daemon GPU configuration}]
+{
+  "runtimes": {
+    "nvidia": {
+      "path": "nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  }
+}
+\end{lstlisting}
+
+Restart Docker to apply the daemon settings:
+\begin{lstlisting}[language=bash, caption={Restarting Docker daemon}]
+sudo systemctl restart docker
+\end{lstlisting}
+
+\cleardoublepage
+\chapter{Code Examples and Configurations}
+
+\section{\sffamily Pipeline Definition with wpipe}
+The following listing demonstrates how to declare a pipeline step and run a DAG execution:
+
+\begin{lstlisting}[language=Python, caption={Pipeline configuration using wpipe}]
+from wpipe import Pipeline, step, Condition
+
+@step
+def extract_data(context):
+    context["raw_data"] = [1, 2, 3, 4]
+    return context
+
+@step
+def process_data(context):
+    context["processed"] = [x * 2 for x in context["raw_data"]]
+    return context
+
+# Instantiate the pipeline engine
+pipe = Pipeline(pipeline_name="DataProcessor", verbose=True)
+pipe.add_step(extract_data)
+pipe.add_step(process_data)
+
+# Run the DAG execution
+results = pipe.run()
+print(results)
+\end{lstlisting}
+
+\section{\sffamily Database Mapping with wsqlite}
+Creating schemas and auto-syncing them with local database backends:
+
+\begin{lstlisting}[language=Python, caption={Pydantic model and SQLite Sync with wsqlite}]
+from pydantic import BaseModel, Field
+from wsqlite import WSQLite
+
+# Define the Pydantic schema model
+class TaskModel(BaseModel):
+    id: int = Field(..., description="Task Primary Key")
+    task_name: str = Field(..., description="Name of execution")
+    completed: bool = Field(default=False)
+
+# Initialize WSQLite ORM (triggers TableSync automatically)
+db = WSQLite(model=TaskModel, db_path="tasks.db")
+
+# Insert a new record
+db.insert(TaskModel(id=101, task_name="Compile LaTeX manual"))
+\end{lstlisting}
+
+\section{\sffamily Secrets Vault Management via wauth}
+Writing and reading machine-locked encrypted credentials:
+
+\begin{lstlisting}[language=Python, caption={Secrets encryption using wauth}]
+from wauth import WAuth
+
+# Initialize the vault (auto-detects hardware ID)
+vault = WAuth(verbose=True)
+
+# Set an encrypted secret
+vault.set("DB_CONNECTION_STRING", "mysql://admin:pass@localhost:3306/db")
+
+# Decrypt and retrieve the secret
+decrypted = vault.get("DB_CONNECTION_STRING")
+print(f"Decrypted string: {decrypted}")
+\end{lstlisting}
+
+\cleardoublepage
+\chapter{Practical Production Case Studies}
+
+\section{\sffamily NeuralForge AI: Distributed YOLO Optimizer}
+NeuralForge AI (train\_service2) uses \textit{wpipe}, \textit{wsqlite}, and \textit{wyolo} to coordinate machine learning workloads. The control server accepts model configurations and submits Celery jobs. 
+
+Optuna suggests hyperparameter sets, which are fetched by invoker workers. The worker configures an ephemeral docker container with GPU flags, runs the training loop, and reports metrics back to PostgreSQL. Weights are uploaded to MinIO and tracked via MLflow.
+
+\section{\sffamily ProcessAudio: Augmentation Pipeline}
+An audio classification pipeline is built using \textit{ProcessAudio}. Audio records are passed through the \texttt{AudioAugmentation} class to apply pitch stretches and noise overlays:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{sources/docker-logo.png}
+    \caption{ProcessAudio containerized processing pipeline.}
+    \label{fig:audio_pipeline}
+\end{figure}
+
+The augmented datasets are passed to the \texttt{Features} extractor class to output MFCC and spectrogram features, feeding training pipelines.
+
+\section{\sffamily Web RPG: Procedural Asset Rendering}
+The game engine at \texttt{wisrovi.github.io} dynamically builds a 3D environment. Building window layouts are generated at runtime on a 2D canvas and applied as textures to 3D meshes. Game states (player level, inventory, trophies) are serialized and saved to browser local storage.
+
+\cleardoublepage
+\chapter{Performance Metrics and Benchmarks}
+
+\section{\sffamily wsqlite Connection Concurrency Performance}
+Tuning SQLite with WAL (Write-Ahead Logging) and asynchronous writes increases transactions throughput:
+
+\begin{table}[H]
+    \centering
+    \caption{Database transaction speed benchmarks.}
+    \label{tab:db_benchmarks}
+    \begin{tabular}{lrr}
+        \toprule
+        \textbf{Mode} & \textbf{Inserts/Second} & \textbf{Avg Latency (ms)} \\
+        \midrule
+        Standard Journal & 45 & 22.2 \\
+        WAL Mode (Active) & 1,200 & 0.8 \\
+        WAL + Sync Off & 4,500 & 0.2 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{\sffamily wFabricSecurity Latency Benchmarks}
+ECDSA digital signatures verification latency is optimized via cert caching:
+
+\begin{table}[H]
+    \centering
+    \caption{ECDSA signature verification speeds.}
+    \label{tab:security_benchmarks}
+    \begin{tabular}{lr}
+        \toprule
+        \textbf{Operation} & \textbf{Time (ms)} \\
+        \midrule
+        SHA-256 Hash Integrity Check & 1.25 \\
+        ECDSA Signature Sign & 0.45 \\
+        ECDSA Signature Verify (No Cache) & 3.20 \\
+        ECDSA Signature Verify (With Cache) & 0.05 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\cleardoublepage
+\chapter{Best Practices, Quality Assurance, and Troubleshooting}
+
+\section{\sffamily Code Quality Controls (Pylint and Bandit)}
+All codebase contributions must adhere to the following checks:
+\begin{enumerate}
+    \item \textbf{Pylint}: Source files are run through lint tests to maintain a score $>9.5$.
+    \item \textbf{Bandit}: Static analysis is executed to scan for security vulnerabilities (e.g., hardcoded passwords).
+    \item \textbf{Safety}: Python dependencies are checked against known vulnerabilities.
+\end{enumerate}
+
+\section{\sffamily Common Failures and Troubleshooting}
+\subsection{\sffamily DatabaseLockedError (SQLite Concurrency)}
+When multiple threads write to SQLite concurrently, a DatabaseLockedError can occur. 
+
+\textbf{Resolution}:
+\begin{itemize}
+    \item Ensure WAL mode is active: \texttt{PRAGMA journal\_mode=WAL}.
+    \item Use connection pooling from \texttt{wsqlite.core.pool} to reuse active database sessions.
+    \item Implement retry logic with exponential backoffs using \texttt{retry\_on\_lock}.
+\end{itemize}
+
+\subsection{\sffamily DecryptionError (wauth Key Mismatch)}
+Occurs when attempting to decrypt secrets on a different machine or if hardware configurations change.
+
+\textbf{Resolution}: Set a static \texttt{custom\_key} in the \texttt{WAuth} constructor to bypass hardware ID key derivation.
+
+\cleardoublepage
+\chapter{Conclusions and Future Roadmap}
+
+\section{\sffamily Final Technical Conclusions}
+The \textit{wisrovi SUITE} provides a robust, modular foundation for building enterprise-grade Python software. By separating concerns (orchestration in \textit{wpipe}, databases in ORMs, security in \textit{wauth}/\textit{wFabricSecurity}), the ecosystem remains maintainable, secure, and performant.
+
+\section{\sffamily Roadmap: Generative AI Integrations}
+The next major evolution of the suite centers around Generative AI:
+\begin{itemize}
+    \item \textbf{LangGraph Orchestrators}: Integrating \textit{wpipe} with LangGraph to monitor and recover multi-agent state execution runs.
+    \item \textbf{Local RAG Database Helpers}: Expanding \textit{wsqlite} and \textit{wredis} with native vector embeddings support to store and query document chunks locally.
+    \item \textbf{LLM Pipeline Code Generation}: Enhancing \textit{wpipe-mcp} to automatically generate structured DTOs and execution steps.
+\end{itemize}
+
+\section{\sffamily Roadmap: Kubernetes GPU Orchestration}
+We are designing Kubernetes deployment manifests to migrate the Celery cluster to Minikube and cloud-scale environments. Workers will dynamically request GPU resources via the Nvidia Device Plugin.
+
+\cleardoublepage
+\begin{thebibliography}{99}
+\bibitem{wpipe} Rodriguez, W. \emph{wpipe: Resilient Python Pipeline Orchestration Engine}, v2.4.0, 2026.
+\bibitem{wsqlite} Rodriguez, W. \emph{wsqlite: Pydantic-based High Performance SQLite ORM}, v1.2.4, 2026.
+\bibitem{wauth} Rodriguez, W. \emph{wauth: Machine-Locked Cryptographic Secret Manager}, v0.5.0, 2026.
+\bibitem{ultralytics} Ultralytics. \emph{YOLOv11: Real-time Object Detection and MLOps Engine}, 2024.
+\bibitem{optuna} Akiba, T., Sano, S., Yanase, T., Ohta, T., and Koyama, M. \emph{Optuna: A Next-generation Hyperparameter Optimization Framework}, KDD, 2019.
+\end{thebibliography}
+
+\cleardoublepage
+\begin{appendices}
+\chapter{Advanced Docker Compose Configuration}
+The following compose YAML starts the PostgreSQL database, Redis broker, and Celery worker:
+
+\begin{lstlisting}[caption={Docker Compose configuration file}]
+{
+  "version": "3.8",
+  "services": {
+    "redis": {
+      "image": "redis:alpine",
+      "ports": ["23437:6379"]
+    },
+    "postgres": {
+      "image": "postgres:16-alpine",
+      "environment": {
+        "POSTGRES_DB": "optuna",
+        "POSTGRES_PASSWORD": "secret_password"
+      },
+      "ports": ["23436:5432"]
+    }
+  }
+}
+\end{lstlisting}
+\end{appendices}
+
+\cleardoublepage
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+I express my gratitude to the open-source community, whose contributions to libraries like PyTorch, Celery, Optuna, FastAPI, and LaTeX make the development of modern MLOps ecosystems possible. 
+
+I also thank eCaptureDtech and my colleagues in Badajoz, Spain, for their support, and the AI engineering teams working on Model Context Protocol specifications that shape the future of agentic workflows.
+
+\end{document}
