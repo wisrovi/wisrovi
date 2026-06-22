@@ -19,6 +19,10 @@
   <b>Python is my peak weapon. I engineer highly-resilient, production-ready AI agents, MLOps platforms, and custom software infrastructure. Based in Badajoz, Spain.</b>
 </p>
 
+<p align="center">
+  🌐 <b>Official Website & Interactive Showcase: <a href="https://wisrovi.dev">wisrovi.dev</a></b>
+</p>
+
 ---
 
 ## 💡 Executive Pitch: I Don't Just Write Code; I Engineer Ecosystems
@@ -74,6 +78,7 @@ Scaling training campaigns from a single workstation to distributed clusters.
 | **`wFabricSecurity`**| Security | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wfabricsecurity?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wfabricsecurity) | Zero Trust security system for Hyperledger Fabric (ECDSA signatures). |
 | **`wyolo`** | MLOps | `Development` | MLflow + S3 automation wrapper for YOLO & RT-DETR models. |
 | **`ProcessAudio`** | MLOps / Audio | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/ProcessAudio?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/ProcessAudio) | Librosa feature extraction & audio data augmentation. |
+| **`wticket`** | Support / Helpdesk | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wticket?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wticket) | Helpdesk manager with dynamic SLAs and client portal APIs. Live demo: [wticket.wisrovi.dev](https://wticket.wisrovi.dev/). |
 
 *Explore all 26+ packages in my [complete library repository](https://github.com/wisrovi/w-cli).*
 
