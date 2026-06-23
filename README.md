@@ -10,12 +10,6 @@
 <h3 align="center">AI Solutions Architect & Principal Software Engineer</h3>
 
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=wisrovi&theme=onedark&column=7" alt="wisrovi trophies" />
-  </a>
-</p>
-
-<p align="center">
   <b>Python is my peak weapon. I engineer highly-resilient, production-ready AI agents, MLOps platforms, and custom software infrastructure. Based in Badajoz, Spain.</b>
 </p>
 
@@ -58,7 +52,7 @@ Scaling training campaigns from a single workstation to distributed clusters.
 
 ## 🌟 Flagship Project: NeuralForge AI (Distributed YOLO Cluster)
 
-**[NeuralForge AI](https://github.com/wisrovi/train_service2)** is the ultimate demonstration of my engineering philosophy. It is a distributed hyperparameter optimization and training ecosystem built entirely on top of the **wisrovi SUITE**.
+**[NeuralForge AI](https://github.com/wisrovi/wyoloservice2_production)** is the ultimate demonstration of my engineering philosophy. It is a distributed hyperparameter optimization and training ecosystem built entirely on top of the **wisrovi SUITE**.
 
 *   **Resilient Scheduling**: Uses the **`wpipe`** DAG engine to manage states, training retries, and task checkpoints.
 *   **MLOps Lifecycle**: Employs **`wyolo`** to execute training loops, auto-configure datasets (via S3/MinIO), and log telemetry directly into MLflow.
