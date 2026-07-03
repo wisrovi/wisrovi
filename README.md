@@ -50,13 +50,18 @@ Scaling training campaigns from a single workstation to distributed clusters.
 
 ---
 
-## 🌟 Flagship Project: NeuralForge AI (Distributed YOLO Cluster)
+## 🌟 Flagship Project: NeuralForge AI (Distributed YOLO Cluster v2.0)
 
-**[NeuralForge AI](https://github.com/wisrovi/wyoloservice2_production)** is the ultimate demonstration of my engineering philosophy. It is a distributed hyperparameter optimization and training ecosystem built entirely on top of the **wisrovi SUITE**.
+**[NeuralForge AI (train_service2)](https://github.com/wisrovi/wyoloservice2_production)** is the ultimate demonstration of my engineering philosophy. It is a distributed hyperparameter optimization and training ecosystem built entirely on top of the **wisrovi SUITE**, now updated to **v2.0.0**.
 
-*   **Resilient Scheduling**: Uses the **`wpipe`** DAG engine to manage states, training retries, and task checkpoints.
-*   **MLOps Lifecycle**: Employs **`wyolo`** to execute training loops, auto-configure datasets (via S3/MinIO), and log telemetry directly into MLflow.
-*   **Distributed Scaling**: Celery queue architectures (Invoker/Executor pattern) and **Optuna** studies running across multiple GPU-accelerated Docker nodes.
+The system utilizes a decoupled microservices architecture designed to scale training campaigns from a single workstation to multiple GPU-accelerated Docker nodes:
+
+*   **FastAPI & Gradio Gateway (`wyoloservice2_control_server`)**: Validates configurations, injects path metadata, and manages study lifecycle through an intuitive dashboard.
+*   **Optuna Study Manager (`wyoloservice2_manager`)**: Orchestrates distributed hyperparameter searches, query suggestions from a central PostgreSQL instance, and evaluates trials.
+*   **Celery-Docker Invoker (`wyoloservice2_invoker`)**: A worker daemon listening on priority queues that creates ephemeral directories, writes trial configurations, and spawns containerized training tasks.
+*   **Ephemeral Training Containers (`wyoloservice2_worker`)**: Dockerized runtime executors that pull raw configs, download S3/MinIO datasets, execute YOLO training loops, report real-time telemetry to MLflow, and automatically clean up resources on exit.
+*   **React Dashboard (`NeuralForgeAI`)**: Interactive and rich user interface built with React to easily launch, track, and analyze training studies.
+*   **Strict Redis Priority Queues**: Workloads are dynamically routed using a prioritized queue system: `private_queue (worker_*) > gpus_high > gpus_medium > gpus_low` ensuring immediate response for targeted hardware debugging.
 
 ---
 
