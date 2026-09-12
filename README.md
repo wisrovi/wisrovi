@@ -72,21 +72,37 @@ flowchart LR
 
 ---
 
-## 🧱 The wisrovi SUITE — 23+ Published PyPI Packages (37 Total Components)
+## 🌌 The wisrovi SUITE — 23 Official PyPI Packages (Binary Universe Architecture)
 
-| Package | Category | PyPI Status | Technical Highlight |
+Structured as a **Binary Universe**: the Macro Core Python/MLOps Solar System around central sun `wpipe`, and the Micro Constellation of 6 FastMCP servers for autonomous LLM agents (Claude, Antigravity, Cursor).
+
+| Package | Category / Orbit | PyPI Status | Technical Highlight |
 | :--- | :--- | :--- | :--- |
-| **`wpipe`** | Pipeline Engine | [![PyPI](https://img.shields.io/pypi/v/wpipe)](https://pypi.org/project/wpipe/) | WAL SQLite state storage, GIL bypass, dynamic DAG checkpointing. |
-| **`wpipe-mcp`** | Agentic AI | [![PyPI](https://img.shields.io/pypi/v/wpipe-mcp)](https://pypi.org/project/wpipe-mcp/) | FastMCP tool server allowing LLMs to safely build, audit, and run pipelines. |
-| **`wsqlite`** | Database ORM | [![PyPI](https://img.shields.io/pypi/v/wsqlite)](https://pypi.org/project/wsqlite/) | TableSync schema generator, Pydantic v2 serialization, soft delete mixins. |
-| **`wredis`** | Caching / Queues | [![PyPI](https://img.shields.io/pypi/v/wredis)](https://pypi.org/project/wredis/) | Sync/async Redis pooling, cache decorators, distributed token-bucket rate limiters. |
-| **`wauth`** | Cryptography | [![PyPI](https://img.shields.io/pypi/v/wauth)](https://pypi.org/project/wauth/) | Machine-salted hardware fingerprint encryption vault (Fernet AES-256). |
-| **`wFabricSecurity`** | Zero Trust | [![PyPI](https://img.shields.io/pypi/v/wfabricsecurity)](https://pypi.org/project/wfabricsecurity/) | ECDSA P-256 digital signature validation and SHA-256 code integrity verifiers. |
-| **`wyolo`** | Vision MLOps | [![PyPI](https://img.shields.io/pypi/v/wyolo)](https://pypi.org/project/wyolo/) | Automated MLflow & S3 lifecycle wrapper for YOLO and RT-DETR architectures. |
-| **`ProcessAudio`** | Signal Processing | [![PyPI](https://img.shields.io/pypi/v/ProcessAudio)](https://pypi.org/project/ProcessAudio/) | Scikit-learn feature transformers for audio spectrograms and data augmentation. |
-| **`wticket`** | Enterprise Apps | [![PyPI](https://img.shields.io/pypi/v/wticket)](https://pypi.org/project/wticket/) | Dynamic SLA helpdesk engine with client portal APIs. Live demo: [wticket.wisrovi.dev](https://wticket.wisrovi.dev/). |
+| **`wpipe`** | Macro Sun: Pipeline Engine | [![PyPI](https://img.shields.io/pypi/v/wpipe)](https://pypi.org/project/wpipe/) | WAL SQLite state storage, GIL bypass, dynamic DAG checkpointing. |
+| **`wkafka`** | Macro Orbit 1: Streaming | [![PyPI](https://img.shields.io/pypi/v/wkafka)](https://pypi.org/project/wkafka/) | Reactive Apache Kafka abstraction (~1,558/mo), declarative retry decorators. |
+| **`wredis`** | Macro Orbit 1: Cache & Locks | [![PyPI](https://img.shields.io/pypi/v/wredis)](https://pypi.org/project/wredis/) | Ultralong distributed caching (~798/mo), atomic locks, token-bucket limiter. |
+| **`wdecorators`** | Macro Orbit 1: Resilience | [![PyPI](https://img.shields.io/pypi/v/wdecorators)](https://pypi.org/project/wdecorators/) | Exponential retries with jitter (~655/mo), latency profiling, and telemetry. |
+| **`wpipe-steps`** | Macro Orbit 1: Modular Steps | [![PyPI](https://img.shields.io/pypi/v/wpipe-steps)](https://pypi.org/project/wpipe-steps/) | Modular, production-ready standardized pipeline step catalog (~184/mo). |
+| **`wsqlite`** | Macro Orbit 2: Database | [![PyPI](https://img.shields.io/pypi/v/wsqlite)](https://pypi.org/project/wsqlite/) | TableSync reactive schema generator, multithread WAL mode, Pydantic v2. |
+| **`wpostgresql`** | Macro Orbit 2: Database | [![PyPI](https://img.shields.io/pypi/v/wpostgresql)](https://pypi.org/project/wpostgresql/) | High-concurrency ACID transactional pooler and ORM mapping for PostgreSQL. |
+| **`wFabricSecurity`** | Macro Orbit 2: Zero Trust | [![PyPI](https://img.shields.io/pypi/v/wfabricsecurity)](https://pypi.org/project/wfabricsecurity/) | Zero Trust security for Hyperledger Fabric (ECDSA P-256 and SHA-256 integrity). |
+| **`wmongo`** | Macro Orbit 2: Database | [![PyPI](https://img.shields.io/pypi/v/wmongo)](https://pypi.org/project/wmongo/) | Reactive MongoDB ODM with Pydantic models and automatic Redis caching. |
+| **`wpipe-plugins`** | Macro Orbit 2: Extensions | [![PyPI](https://img.shields.io/pypi/v/wpipe-plugins)](https://pypi.org/project/wpipe-plugins/) | Dynamic community extension framework for modular wpipe pipelines. |
+| **`wutils`** | Macro Orbit 2: Utilities | [![PyPI](https://img.shields.io/pypi/v/wutils)](https://pypi.org/project/wutils/) | Schedulers, safe cron expression parsing, and data format validation. |
+| **`wyolo`** | Macro Orbit 3: Vision MLOps | [![PyPI](https://img.shields.io/pypi/v/wyolo)](https://pypi.org/project/wyolo/) | Automated YOLOv8/v11/v26 wrapper with MLflow telemetry and MinIO S3 sync. |
+| **`wcontainer`** | Macro Orbit 3: Docker Engine | [![PyPI](https://img.shields.io/pypi/v/wcontainer)](https://pypi.org/project/wcontainer/) | Docker SDK governor, dynamic GPU VRAM/CPU quotas, and container lifecycle. |
+| **`wclickhouse`** | Macro Orbit 3: Big Data | [![PyPI](https://img.shields.io/pypi/v/wclickhouse)](https://pypi.org/project/wclickhouse/) | High-throughput columnar OLAP analytics ORM for ClickHouse batches. |
+| **`wauth`** | Macro Orbit 3: Cryptography | [![PyPI](https://img.shields.io/pypi/v/wauth)](https://pypi.org/project/wauth/) | Machine-salted hardware fingerprint encryption vault (Fernet AES-256). |
+| **`wisrovi-python`** | Macro Orbit 3: Foundational | [![PyPI](https://img.shields.io/pypi/v/wisrovi-python)](https://pypi.org/project/wisrovi-python/) | Foundational shared types, algorithms, and mathematical utilities of the suite. |
+| **`ProcessAudio`** | Macro Orbit 3: Signal DSP | [![PyPI](https://img.shields.io/pypi/v/ProcessAudio)](https://pypi.org/project/ProcessAudio/) | Scikit-learn transformers for Mel-spectrograms, MFCC, and audio DSP augmentation. |
+| **`wpipe-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wpipe-mcp)](https://pypi.org/project/wpipe-mcp/) | FastMCP server for pipeline topology, context verification, and dry-runs. |
+| **`wyoloservice-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wyoloservice-mcp)](https://pypi.org/project/wyoloservice-mcp/) | FastMCP agentic tools for remote GPU cluster orchestration & Optuna sweeps. |
+| **`wredis-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wredis-mcp)](https://pypi.org/project/wredis-mcp/) | FastMCP safe key inspection, datastores telemetry, and memory profiling. |
+| **`wsqlite-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wsqlite-mcp)](https://pypi.org/project/wsqlite-mcp/) | FastMCP safe parameterized querying and SQLite schema extraction. |
+| **`wpostgresql-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wpostgresql-mcp)](https://pypi.org/project/wpostgresql-mcp/) | FastMCP relational database inspection and transaction monitoring. |
+| **`wkafka-mcp`** | Micro MCP Constellation | [![PyPI](https://img.shields.io/pypi/v/wkafka-mcp)](https://pypi.org/project/wkafka-mcp/) | FastMCP topic telemetry, consumer group lag monitoring, and event streaming. |
 
-*Explore the full catalog of packages on [PyPI (wisrovi)](https://pypi.org/user/wisrovi/) and source repositories on [GitHub](https://github.com/wisrovi).*
+*Explore all 23 official packages on [PyPI (wisrovi)](https://pypi.org/user/wisrovi/) and source code on [GitHub](https://github.com/wisrovi).*
 
 ---
 
