@@ -3,7 +3,7 @@
   <a href="https://linkedin.com/in/wisrovi-rodriguez"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://orcid.org/0009-0005-0710-1861"><img src="https://img.shields.io/badge/ORCID-0009--0005--0710--1861-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
   <a href="https://wisrovi.dev"><img src="https://img.shields.io/badge/Portfolio-wisrovi.dev-111827?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://pypi.org/user/wisrovi/"><img src="https://img.shields.io/badge/PyPI-26+_Packages-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI" /></a>
+  <a href="https://pypi.org/user/wisrovi/"><img src="https://img.shields.io/badge/PyPI-23+_Packages-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI" /></a>
   <a href="https://hub.docker.com/u/wisrovi"><img src="https://img.shields.io/badge/DockerHub-wisrovi-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockerHub" /></a>
 </p>
 
@@ -25,7 +25,7 @@
 In enterprise AI and scientific computing, the critical bottleneck is neither model size nor simple prompting—it is **architectural integrity, statistical safety, and production resilience**.
 
 My work operates at the exact intersection of **hardcore systems engineering** and **rigorous scientific research**:
-* **On the Engineering Side**: I engineer distributed, multi-node MLOps platforms, fault-isolated container executors (the Invoker-Executor pattern), asynchronous task routing with Redis priority queues, and maintain **26+ published Python packages** on PyPI.
+* **On the Engineering Side**: I engineer distributed, multi-node MLOps platforms, fault-isolated container executors (the Invoker-Executor pattern), asynchronous task routing with Redis priority queues, and maintain **23+ published Python packages on PyPI (37 total ecosystem modules)** coordinated via [`w-cli`](https://github.com/wisrovi/w-cli).
 * **On the Scientific Side**: I conduct applied and fundamental research in **Quantitative Explainable AI (XAI)**, **Conformal Prediction**, **In-Training Causal Saliency Regularization**, and **Formal Verification (LTL Model Checking)** for autonomous multi-agent networks.
 
 ---
@@ -72,7 +72,7 @@ flowchart LR
 
 ---
 
-## 🧱 The wisrovi SUITE — 26+ Published Python Packages
+## 🧱 The wisrovi SUITE — 23+ Published PyPI Packages (37 Total Components)
 
 | Package | Category | PyPI Status | Technical Highlight |
 | :--- | :--- | :--- | :--- |
