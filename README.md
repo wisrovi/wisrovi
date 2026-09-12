@@ -1,174 +1,150 @@
 <!-- Header Section -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" width="24" height="24" /> 
-  <a href="https://linkedin.com/in/wisrovi-rodriguez"><b>LinkedIn</b></a> | 
-  <a href="https://wisrovi.dev"><b>Portfolio</b></a> | 
-  <a href="mailto:wisrovi.rodriguez@gmail.com"><b>Email Me</b></a>
+  <a href="https://linkedin.com/in/wisrovi-rodriguez"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://orcid.org/0009-0005-0710-1861"><img src="https://img.shields.io/badge/ORCID-0009--0005--0710--1861-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
+  <a href="https://wisrovi.dev"><img src="https://img.shields.io/badge/Portfolio-wisrovi.dev-111827?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://pypi.org/user/wisrovi/"><img src="https://img.shields.io/badge/PyPI-26+_Packages-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI" /></a>
+  <a href="https://hub.docker.com/u/wisrovi"><img src="https://img.shields.io/badge/DockerHub-wisrovi-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockerHub" /></a>
 </p>
 
-<h1 align="center">William Rodriguez (wisrovi)</h1>
-<h3 align="center">AI Solutions Architect & Principal Software Engineer</h3>
+<h1 align="center">William Steve Rodriguez Villamizar (wisrovi)</h1>
+<h3 align="center">Principal AI Engineer & Applied AI Solutions Architect | Scientific Researcher</h3>
 
 <p align="center">
-  <b>Python is my peak weapon. I engineer highly-resilient, production-ready AI agents, MLOps platforms, and custom software infrastructure. Based in Badajoz, Spain.</b>
+  <b>Bridging mission-critical production engineering and cutting-edge Artificial Intelligence research. Architect of distributed MLOps clusters, Model Context Protocol (MCP) agentic workflows, and author of 26 peer-reviewed scientific preprints. Based in Badajoz, Spain.</b>
 </p>
 
 <p align="center">
-  🌐 <b>Official Website & Interactive Showcase: <a href="https://wisrovi.dev">wisrovi.dev</a></b>
+  🌐 <b>Official Research & Software Portal: <a href="https://wisrovi.dev">wisrovi.dev</a></b> | 🆔 <b>ORCID ID: <a href="https://orcid.org/0009-0005-0710-1861">0009-0005-0710-1861</a></b>
 </p>
 
 ---
 
-## 💡 Executive Pitch: I Don't Just Write Code; I Engineer Ecosystems
+## 💡 Executive Pitch: Engineering Resilient Ecosystems & Advancing AI Frontiers
 
-In modern engineering, the bottleneck is rarely writing code—it is **resiliency, scalability, and design integrity**. 
+In enterprise AI and scientific computing, the critical bottleneck is neither model size nor simple prompting—it is **architectural integrity, statistical safety, and production resilience**.
 
-While many build simple AI wrappers, my primary focus is designing **high-availability systems where Generative AI, Computer Vision, and modular infrastructure converge** to solve complex enterprise problems. 
-
-By leveraging **Python** as my supreme engineering backbone, I create custom frameworks, distributed MLOps clusters, and multi-agent state machines designed to survive in high-concurrency production workloads.
-
----
-
-## 🧠 Core Competencies
-
-### 1. 🤖 Generative AI & Agentic Architectures
-I design next-generation cognitive systems that move past simple prompt engineering into complex, stateful reasoning loops.
-*   **Stateful Agent Orchestration**: Building multi-agent systems using **LangGraph** and **LangChain** to orchestrate structured, reliable agent behaviors.
-*   **RAG (Retrieval-Augmented Generation)**: Engineering advanced semantic search and query expansion pipelines, utilizing vector embeddings and vector databases (Milvus, PgVector) to inject contextual accuracy.
-*   **Generative AI & LLMs**: Implementing LLM integration patterns, reasoning validation, fine-tuning structures, and safety/security filters.
-
-### 2. ⚡ Python Infrastructure Engineering (The wisrovi SUITE)
-I believe in writing code that other developers rely on. To solve common bottlenecks in database operations, caching, and pipeline orchestration, I built a catalog of **26+ custom Python libraries**:
-*   **Orchestration (`wpipe`)**: A lightweight Python pipeline executor featuring WAL-mode SQLite state storage, GIL bypass, DAG scheduling, and dynamic checkpoints.
-*   **ORM Systems (`wsqlite`, `wredis`, `wclickhouse`)**: Custom wrappers resolving database concurrency, soft deletions, and bulk insertions utilizing Pydantic v2 schemas.
-*   **Zero Trust Security (`wauth`, `wFabricSecurity`)**: Cryptographic vaults tying encryption to salted machine hardware signatures and securing distributed networks.
-
-### 3. 🔬 Computer Vision & MLOps
-Scaling training campaigns from a single workstation to distributed clusters.
-*   **MLOps Automation**: Complete training lifecycle management of YOLO and RT-DETR models.
-*   **Distributed Compute**: Celery-based worker structures mapping and utilizing GPU topologies, autobatching weights based on VRAM capacity, and tracking runs via MLflow.
+My work operates at the exact intersection of **hardcore systems engineering** and **rigorous scientific research**:
+* **On the Engineering Side**: I engineer distributed, multi-node MLOps platforms, fault-isolated container executors (the Invoker-Executor pattern), asynchronous task routing with Redis priority queues, and maintain **26+ published Python packages** on PyPI.
+* **On the Scientific Side**: I conduct applied and fundamental research in **Quantitative Explainable AI (XAI)**, **Conformal Prediction**, **In-Training Causal Saliency Regularization**, and **Formal Verification (LTL Model Checking)** for autonomous multi-agent networks.
 
 ---
 
-## 🌟 Flagship Project: NeuralForge AI (Distributed YOLO Cluster v2.0)
+## 🔬 Scientific Research & Peer-Reviewed Preprints (Zenodo / CERN)
 
-**[NeuralForge AI (train_service2)](https://github.com/wisrovi/wyoloservice2_production)** is the ultimate demonstration of my engineering philosophy. It is a distributed hyperparameter optimization and training ecosystem built entirely on top of the **wisrovi SUITE**, now updated to **v2.0.0**.
+Lead investigator of the **wisrovi-suit AI Research Initiative**. All 26 publications feature open reproducible code, mathematical formalization, bootstrap statistical bounds, and official DOIs:
 
-The system utilizes a decoupled microservices architecture designed to scale training campaigns from a single workstation to multiple GPU-accelerated Docker nodes:
+```mermaid
+flowchart LR
+    A["Cluster Telemetry & Workflows"] --> B["Quantitative XAI & Causal Saliency"]
+    B --> C["Safety & Conformal Prediction"]
+    C --> D["Formal Verification (LTL/MCP)"]
+    D --> E["Autonomous Auditing Gate"]
+    
+    style A fill:#1e293b,color:#fff,stroke:#38bdf8,stroke-width:2px
+    style B fill:#1e293b,color:#fff,stroke:#818cf8,stroke-width:2px
+    style C fill:#1e293b,color:#fff,stroke:#34d399,stroke-width:2px
+    style D fill:#1e293b,color:#fff,stroke:#fbbf24,stroke-width:2px
+    style E fill:#1e293b,color:#fff,stroke:#f87171,stroke-width:2px
+```
 
-*   **FastAPI & Gradio Gateway (`wyoloservice2_control_server`)**: Validates configurations, injects path metadata, and manages study lifecycle through an intuitive dashboard.
-*   **Optuna Study Manager (`wyoloservice2_manager`)**: Orchestrates distributed hyperparameter searches, query suggestions from a central PostgreSQL instance, and evaluates trials.
-*   **Celery-Docker Invoker (`wyoloservice2_invoker`)**: A worker daemon listening on priority queues that creates ephemeral directories, writes trial configurations, and spawns containerized training tasks.
-*   **Ephemeral Training Containers (`wyoloservice2_worker`)**: Dockerized runtime executors that pull raw configs, download S3/MinIO datasets, execute YOLO training loops, report real-time telemetry to MLflow, and automatically clean up resources on exit.
-*   **React Dashboard (`NeuralForgeAI`)**: Interactive and rich user interface built with React to easily launch, track, and analyze training studies.
-*   **Strict Redis Priority Queues**: Workloads are dynamically routed using a prioritized queue system: `private_queue (worker_*) > gpus_high > gpus_medium > gpus_low` ensuring immediate response for targeted hardware debugging.
+### 🌟 Featured Research Contributions (Featured in ORCID):
+1. **Causal Saliency Regularization (CSR)**: Mitigating Clever Hans Artifacts in Deep Object Detectors via In-Training Explainability Penalties — [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22716676.svg)](https://doi.org/10.5281/zenodo.22716676)
+2. **Conformal Prediction & Epistemic Uncertainty Decomposition**: Finite-sample coverage guarantees for safety-critical edge vision under representation-level domain shift — [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22716681.svg)](https://doi.org/10.5281/zenodo.22716681)
+3. **Formal Verification of Agentic MLOps Workflows**: Model Checking and Liveness Guarantees in Distributed Model Context Protocol (MCP) Workflows — [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22716667.svg)](https://doi.org/10.5281/zenodo.22716667)
+4. **Self-Healing Distributed MLOps**: Autonomous Fault Detection, Node Eviction, and Resilient State Reconciliation in Heterogeneous GPU Clusters — [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22716656.svg)](https://doi.org/10.5281/zenodo.22716656)
+5. **Zero-Shot Diffusion Purification**: Stochastic Denoising Defense for YOLO Detectors against Transferable Adversarial Attacks — [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22716695.svg)](https://doi.org/10.5281/zenodo.22716695)
+
+*Explore all 26 manuscripts, datasets, and BibTeX citations at [ORCID Record 0009-0005-0710-1861](https://orcid.org/0009-0005-0710-1861).*
 
 ---
 
-## 🧱 The wisrovi SUITE — Main Index
+## 🌟 Flagship Industrial Platform: NeuralForge AI (Distributed MLOps Cluster)
 
-| Component | Category | Registry / Status | Focus & Key Technical Specs |
+**[NeuralForge AI (wyoloservice2)](https://github.com/wisrovi/wyoloservice2_production)** is an enterprise-grade distributed hyperparameter optimization and computer vision training platform:
+
+* **API Gateway & Monitoring UI (`NeuralForgeAI` / `:23442`)**: React 19 Single Page Application + FastAPI backend managing studies, datasets, and queue telemetry.
+* **Datastore Backbone (`wyoloservice2_control_server`)**: Centralized PostgreSQL, Redis queue manager, MinIO S3 object storage, and MLflow server.
+* **Evolutionary Optimization Engine (`wyoloservice2_manager`)**: Distributed Optuna genetic loop (TPESampler) proposing parameter trials.
+* **Hardware Quota Daemon (`wyoloservice2_invoker`)**: GPU host agent managing VRAM quotas, CIFS mounts, and launching isolated ephemeral Docker execution containers.
+* **Ephemeral Training Engine (`wyoloservice2_worker`)**: Dockerized runtime executing the 22-step post-train forensic pipeline (`wpipe`), XAI heatmaps, noise injection, and automated LLM report synthesis.
+* **Strict Multi-Queue Priority Routing**: `private_queue (worker_*) > gpus_high > gpus_medium > gpus_low`.
+
+---
+
+## 🧱 The wisrovi SUITE — 26+ Published Python Packages
+
+| Package | Category | PyPI Status | Technical Highlight |
 | :--- | :--- | :--- | :--- |
-| **`wpipe`** | Core Engine | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wpipe?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wpipe) | WAL SQLite state storage, GIL bypass, thread/process parallel setups. |
-| **`wpipe-mcp`** | Generative AI | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wpipe-mcp?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wpipe-mcp) | Model Context Protocol (MCP) server letting LLMs program and deploy pipelines. |
-| **`wsqlite`** | Database ORM | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wsqlite?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wsqlite) | TableSync migration generator, soft deletion query filters, connection pooling. |
-| **`wauth`** | Security | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wauth?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wauth) | Secrets vault tied deterministically to machine hardware signatures (Fernet). |
-| **`wredis`** | Database ORM | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wredis?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wredis) | Sync/async Redis integration, cache expiration decorators, rate-limiters. |
-| **`wFabricSecurity`**| Security | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wfabricsecurity?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wfabricsecurity) | Zero Trust security system for Hyperledger Fabric (ECDSA signatures). |
-| **`wyolo`** | MLOps | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wyolo?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wyolo) | MLflow + S3 automation wrapper for YOLO & RT-DETR models. |
-| **`ProcessAudio`** | MLOps / Audio | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/ProcessAudio?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/ProcessAudio) | Librosa feature extraction & audio data augmentation. |
-| **`wticket`** | Support / Helpdesk | [![PyPI Downloads](https://static.pepy.tech/personalized-badge/wticket?period=total&units=NONE&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/wticket) | Helpdesk manager with dynamic SLAs and client portal APIs. Live demo: [wticket.wisrovi.dev](https://wticket.wisrovi.dev/). |
+| **`wpipe`** | Pipeline Engine | [![PyPI](https://img.shields.io/pypi/v/wpipe)](https://pypi.org/project/wpipe/) | WAL SQLite state storage, GIL bypass, dynamic DAG checkpointing. |
+| **`wpipe-mcp`** | Agentic AI | [![PyPI](https://img.shields.io/pypi/v/wpipe-mcp)](https://pypi.org/project/wpipe-mcp/) | FastMCP tool server allowing LLMs to safely build, audit, and run pipelines. |
+| **`wsqlite`** | Database ORM | [![PyPI](https://img.shields.io/pypi/v/wsqlite)](https://pypi.org/project/wsqlite/) | TableSync schema generator, Pydantic v2 serialization, soft delete mixins. |
+| **`wredis`** | Caching / Queues | [![PyPI](https://img.shields.io/pypi/v/wredis)](https://pypi.org/project/wredis/) | Sync/async Redis pooling, cache decorators, distributed token-bucket rate limiters. |
+| **`wauth`** | Cryptography | [![PyPI](https://img.shields.io/pypi/v/wauth)](https://pypi.org/project/wauth/) | Machine-salted hardware fingerprint encryption vault (Fernet AES-256). |
+| **`wFabricSecurity`** | Zero Trust | [![PyPI](https://img.shields.io/pypi/v/wfabricsecurity)](https://pypi.org/project/wfabricsecurity/) | ECDSA P-256 digital signature validation and SHA-256 code integrity verifiers. |
+| **`wyolo`** | Vision MLOps | [![PyPI](https://img.shields.io/pypi/v/wyolo)](https://pypi.org/project/wyolo/) | Automated MLflow & S3 lifecycle wrapper for YOLO and RT-DETR architectures. |
+| **`ProcessAudio`** | Signal Processing | [![PyPI](https://img.shields.io/pypi/v/ProcessAudio)](https://pypi.org/project/ProcessAudio/) | Scikit-learn feature transformers for audio spectrograms and data augmentation. |
+| **`wticket`** | Enterprise Apps | [![PyPI](https://img.shields.io/pypi/v/wticket)](https://pypi.org/project/wticket/) | Dynamic SLA helpdesk engine with client portal APIs. Live demo: [wticket.wisrovi.dev](https://wticket.wisrovi.dev/). |
 
-*Explore all 26+ packages in my [complete library repository](https://github.com/wisrovi/w-cli).*
+*Explore the full catalog of packages on [PyPI (wisrovi)](https://pypi.org/user/wisrovi/) and source repositories on [GitHub](https://github.com/wisrovi).*
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technical Competencies & Toolchain
 
 <table>
   <tr>
-    <td valign="top" width="20%">
-      <b>🧠 Generative AI</b>
-    </td>
-    <td valign="top" width="80%">
-      LangGraph, LangChain, RAG, LLM Engineering, Vector Databases (Milvus, PgVector), OpenAI API, HuggingFace
-    </td>
+    <td valign="top" width="25%"><b>🧠 Agentic AI & LLMs</b></td>
+    <td valign="top" width="75%">Model Context Protocol (MCP), LangGraph, LangChain, Agentic RAG, Semantic Caching, Local LLM Inference (vLLM, Ollama), Groundedness Auditing</td>
   </tr>
   <tr>
-    <td valign="top" width="20%">
-      <b>🤖 Computer Vision</b>
-    </td>
-    <td valign="top" width="80%">
-      YOLO, RT-DETR, OpenCV, PyTorch, TensorFlow, Scikit-Learn
-    </td>
+    <td valign="top" width="25%"><b>🤖 Vision & Mathematics</b></td>
+    <td valign="top" width="75%">YOLO (v8, v11, v26), RT-DETR, PyTorch, Causal Inference, Conformal Prediction, Formal Verification (LTL Model Checking), Grad-CAM/Eigen-CAM, Itô SDEs</td>
   </tr>
   <tr>
-    <td valign="top" width="20%">
-      <b>💻 Programming</b>
-    </td>
-    <td valign="top" width="80%">
-      <b>Python (Peak Weapon)</b>, Bash/Shell, C/C++, Java, SQL, JavaScript (ES6)
-    </td>
+    <td valign="top" width="25%"><b>⚡ Programming & Core</b></td>
+    <td valign="top" width="75%"><b>Python (Primary Engineering Weapon)</b>, Bash/Shell, C/C++, SQL, TypeScript/JavaScript (ES6+)</td>
   </tr>
   <tr>
-    <td valign="top" width="20%">
-      <b>🗄️ Databases</b>
-    </td>
-    <td valign="top" width="80%">
-      SQLite, Redis, ClickHouse, PostgreSQL, MySQL, MariaDB, MongoDB, Elasticsearch, Snowflake
-    </td>
+    <td valign="top" width="25%"><b>🗄️ Storage & Datastores</b></td>
+    <td valign="top" width="75%">PostgreSQL, Redis, MinIO S3, SQLite (WAL mode), ClickHouse, MongoDB, PgVector, Milvus</td>
   </tr>
   <tr>
-    <td valign="top" width="20%">
-      <b>🐳 DevOps / Infra</b>
-    </td>
-    <td valign="top" width="80%">
-      Docker, Celery, NATS, Kafka, ZeroMQ, HAProxy, DVC, AWS (S3, AWS API), Git CI/CD
-    </td>
+    <td valign="top" width="25%"><b>🐳 MLOps & Infrastructure</b></td>
+    <td valign="top" width="75%">Docker, Celery, MLflow, Optuna, FastMCP, NATS, Linux Kernel Tuning, NVIDIA Container Toolkit, CIFS/Samba, Git CI/CD</td>
   </tr>
 </table>
 
 ---
 
-## 🎮 Game Development
-*   **[Wisrovi Legacy](https://wisrovi.github.io)**: A procedural 3D driving RPG built with Vanilla JS and WebGL/Three.js. Demonstrates my frontend abilities and procedural texture rendering.
+## 🎮 Interactive Showcase: Wisrovi Legacy
+
+* **[Wisrovi Legacy (Live Game)](https://wisrovi.github.io)**: A procedural 3D driving RPG built with Vanilla JavaScript and WebGL/Three.js showcasing the libraries and distributed MLOps architecture in an interactive virtual science campus.
 
 ---
 
-## 📊 Github Metrics
+## 🎯 Doctoral Research Agenda & Theoretical Pillars
 
-<p align="center">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=wisrovi&show_icons=true&locale=en&layout=compact&theme=onedark" alt="wisrovi languages" />
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=wisrovi&show_icons=true&locale=en&theme=onedark" alt="wisrovi stats" />
-</p>
+As an aspiring Ph.D. candidate, my doctoral research focuses on **Autonomous Verification, Causal Explainability, and Statistical Safety in Distributed Vision Architectures**. I investigate three foundational scientific questions:
 
----
-
-## 📄 Technical Manual: Kubernetes GPU Integration for MLOps Workloads
-
-A comprehensive 22-page technical guide has been compiled and is available as a PDF in this repository:
-*   **Location**: [main.pdf](file:///home/william.rodriguez/Documents/w_libraries/wisrovi/main.pdf)
-*   **LaTeX Source**: [docs/main.tex](file:///home/william.rodriguez/Documents/w_libraries/wisrovi/docs/main.tex)
-*   **Contents**: Detailed architecture diagrams of the `w-libraries` suite, step-by-step installation routines for docker/GPU runtimes, Optuna-Celery configurations, and future roadmaps with LangGraph/RAG integrations.
+1. **Causal Saliency & Shortcut Mitigation:** How can we mathematically penalize non-causal representation shortcuts during gradient descent without sacrificing real-time detection throughput ($mAP_{50}$ vs. Deletion/Insertion AUC Pareto optimality)?
+2. **Conformal Prediction under Dynamic Domain Shift:** Establishing finite-sample, distribution-free coverage bounds for deep detectors operating under heavy sensor degradation and non-stationary edge environments.
+3. **Formal Verification of Distributed Agentic Workflows:** Synthesizing runtime verification monitors and model checkers based on Linear Temporal Logic (LTL) to guarantee safety, dead-lock freedom, and liveness in autonomous multi-agent tool execution (Model Context Protocol).
 
 ---
 
-## ☕ Support My Work
+## 🎓 Academic Credentials & Professional Memberships
 
-If you find my open-source projects or guides helpful, feel free to support my ongoing research:
-
-<p align="left">
-  <a href="https://www.buymeacoffee.com/wisrovirod8" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42" style="vertical-align:middle" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://ko-fi.com/williamrodriguez" target="_blank">
-    <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" alt="Ko-Fi" height="42" style="vertical-align:middle" />
-  </a>
-</p>
+* **M.Sc. in Artificial Intelligence** — Universidad Internacional de Valencia (VIU), Spain (*Honors thesis track*).
+* **B.Sc. in Electronic Engineering** — Universidad de Investigación y Desarrollo (UDI), Colombia (*Magna cum laude project*).
+* **Professional Member** — IEEE Computer Society (Member #9983421).
+* **Principal Investigator & Grantee** — wisrovi-suit AI Research Initiative (Badajoz, Extremadura, Spain).
 
 ---
 
 <p align="center">
-  <i>"I love to research and learn as much as I love chess or my family."</i>
+  <i>"Rigorous systems engineering in production; uncompromising mathematical rigor in research."</i>
+</p>
+<p align="center">
+  <sub>© 2026 William Steve Rodriguez Villamizar (wisrovi). Distributed under the MIT License. Open for academic research collaborations.</sub>
 </p>
