@@ -6,8 +6,8 @@ This document is a technical reference guide containing a comprehensive mapping 
 
 ## 👤 1. Developer Profile & Engineering Philosophy
 
-*   **Developer**: William Rodriguez (wisrovi / wisrovirod8)
-*   **Role**: AI Leader & Solutions Architect at eCaptureDtech (Badajoz, Extremadura, Spain).
+*   **Developer**: William Steve Rodriguez Villamizar (wisrovi / wisrovirod8)
+*   **Role**: Principal AI Engineer & Applied AI Solutions Architect | AI Researcher at wisrovi-suit AI Research Initiative (Badajoz, Extremadura, Spain).
 *   **Core Languages**: **Python** (supreme professional weapon), Shell/Bash, JavaScript (ES6), SQL, C/C++, Java.
 *   **Key Architectures**:
     *   **Generative AI**: LangGraph, LangChain, Retrieval-Augmented Generation (RAG) with Milvus/PgVector, LLM orchestration.
