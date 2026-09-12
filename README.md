@@ -135,8 +135,8 @@ As an aspiring Ph.D. candidate, my doctoral research focuses on **Autonomous Ver
 
 ## 🎓 Academic Credentials & Professional Memberships
 
-* **M.Sc. in Artificial Intelligence** — Universidad Internacional de Valencia (VIU), Spain (*Honors thesis track*).
-* **B.Sc. in Electronic Engineering** — Universidad de Investigación y Desarrollo (UDI), Colombia (*Magna cum laude project*).
+* **M.Sc. in Artificial Intelligence** — Universidad Internacional de Valencia (VIU), Spain (2023–2024).
+* **B.Sc. in Electronic Engineering** — Universidad de Investigación y Desarrollo (UDI), Colombia (2010–2016).
 * **Professional Member** — IEEE Computer Society (Member #9983421).
 * **Principal Investigator & Grantee** — wisrovi-suit AI Research Initiative (Badajoz, Extremadura, Spain).
 
