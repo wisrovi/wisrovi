@@ -76,6 +76,70 @@ flowchart LR
 
 Structured as a **Binary Universe**: the Macro Core Python/MLOps Solar System around central sun `wpipe`, and the Micro Constellation of 6 FastMCP servers for autonomous LLM agents (Claude, Antigravity, Cursor).
 
+```mermaid
+flowchart TD
+    subgraph Macro_System ["🌌 Macro Solar System: Python & MLOps Infrastructure"]
+        Sun["☀️ wpipe (Central Sun)<br/>WAL Engine · GIL Bypass · DAG Checkpoints"]
+        
+        subgraph Orbit1 ["🪐 Orbit 1: Core Extensions & High Throughput"]
+            wkafka["wkafka<br/>Reactive Streaming"]
+            wredis["wredis<br/>Distributed Cache & Locks"]
+            wdecorators["wdecorators<br/>Resilience & Telemetry"]
+            wpipesteps["wpipe-steps<br/>Modular Step Catalog"]
+        end
+        
+        subgraph Orbit2 ["🪐 Orbit 2: Enterprise Persistence & Security"]
+            wsqlite["wsqlite<br/>WAL TableSync ORM"]
+            wpostgresql["wpostgresql<br/>ACID Pooler"]
+            wFabricSecurity["wFabricSecurity<br/>ECDSA Zero Trust"]
+            wmongo["wmongo<br/>Reactive ODM"]
+            wpipeplugins["wpipe-plugins<br/>Plugin Framework"]
+            wutils["wutils<br/>Schedulers & Cron"]
+        end
+        
+        subgraph Orbit3 ["🪐 Orbit 3: Distributed MLOps & Big Data"]
+            wyolo["wyolo<br/>YOLO Training Wrapper"]
+            wcontainer["wcontainer<br/>Docker & GPU Governor"]
+            wclickhouse["wclickhouse<br/>Columnar OLAP"]
+            wauth["wauth<br/>Hardware Crypt Vault"]
+            wisrovipython["wisrovi-python<br/>Core Foundations"]
+            processaudio["ProcessAudio<br/>DSP Mel Transformers"]
+        end
+        
+        Sun --> Orbit1
+        Sun --> Orbit2
+        Sun --> Orbit3
+    end
+
+    subgraph Micro_Constellation ["✨ Micro Constellation: FastMCP Agentic Hub"]
+        LLM["🤖 Autonomous AI Agents<br/>(Claude · Antigravity · Cursor)"]
+        
+        m_wpipe["wpipe-mcp"]
+        m_wyolo["wyoloservice-mcp"]
+        m_wredis["wredis-mcp"]
+        m_wsqlite["wsqlite-mcp"]
+        m_wpostgres["wpostgresql-mcp"]
+        m_wkafka["wkafka-mcp"]
+        
+        LLM --> m_wpipe
+        LLM --> m_wyolo
+        LLM --> m_wredis
+        LLM --> m_wsqlite
+        LLM --> m_wpostgres
+        LLM --> m_wkafka
+    end
+
+    Sun -.->|Agentic Orchestration| LLM
+
+    style Sun fill:#1e293b,color:#fff,stroke:#f59e0b,stroke-width:3px
+    style LLM fill:#1e293b,color:#fff,stroke:#a855f7,stroke-width:3px
+    style Macro_System fill:#0f172a,color:#e2e8f0,stroke:#3b82f6,stroke-width:1px
+    style Micro_Constellation fill:#0f172a,color:#e2e8f0,stroke:#8b5cf6,stroke-width:1px
+    style Orbit1 fill:#1e293b,color:#fff,stroke:#38bdf8,stroke-width:1px
+    style Orbit2 fill:#1e293b,color:#fff,stroke:#34d399,stroke-width:1px
+    style Orbit3 fill:#1e293b,color:#fff,stroke:#f43f5e,stroke-width:1px
+```
+
 | Package | Category / Orbit | PyPI Status | Technical Highlight |
 | :--- | :--- | :--- | :--- |
 | **`wpipe`** | Macro Sun: Pipeline Engine | [![PyPI](https://img.shields.io/pypi/v/wpipe)](https://pypi.org/project/wpipe/) | WAL SQLite state storage, GIL bypass, dynamic DAG checkpointing. |
